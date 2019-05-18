@@ -1,0 +1,101 @@
+{
+  "name": "tempest",
+  "version": "0.0.4",
+  "sideEffects": false,
+  "description": "Basic UI component starter kit with sane style solutions",
+  "keywords": [
+    "Components",
+    "UI",
+    "Theme",
+    "Tooltip"
+  ],
+  "main": "lib/index.js",
+  "module": "lib/index.es.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "**/*.js",
+    "**/*.jsx",
+    "**/*.ts",
+    "**/*.tsx"
+  ],
+  "scripts": {
+    "test": "jest",
+    "prepublishOnly": "npm run build",
+    "build": "rollup -c",
+    "build-docs": "webpack --config webpack.config.js --env prod",
+    "dev": "webpack-dev-server --hot --inline"
+  },
+  "repository": "https://github.com/DuncanWalter/daggerboard",
+  "author": "Duncan Walter",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DuncanWalter/daggerboard/issues"
+  },
+  "homepage": "https://github.com/DuncanWalter/daggerboard#readme",
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(\\.|/)test\\.tsx?$",
+    "moduleFileExtensions": [
+      "ts",
+      "js",
+      "tsx"
+    ]
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "all",
+    "arrowParens": "avoid",
+    "tabWidth": 2
+  },
+  "peerDependencies": {
+    "react": "^16.8.6"
+  },
+  "devDependencies": {
+    "@babel/core": "7.4.4",
+    "@babel/plugin-syntax-dynamic-import": "7.2.0",
+    "@babel/preset-env": "7.4.4",
+    "@babel/preset-react": "7.0.0",
+    "@babel/preset-typescript": "7.3.3",
+    "@dwalter/create-reducer": "1.1.1",
+    "@dwalter/spider-dev-middleware": "0.0.1",
+    "@dwalter/spider-hook": "1.5.2",
+    "@types/history": "4.7.2",
+    "@types/jest": "23.3.1",
+    "@types/react": "16.8.6",
+    "@types/react-dom": "16.8.4",
+    "babel-loader": "8.0.4",
+    "compression-webpack-plugin": "2.0.0",
+    "css-loader": "^2.1.0",
+    "daggerboard": "0.0.4",
+    "file-loader": "1.1.11",
+    "history": "4.9.0",
+    "html-webpack-plugin": "3.2.0",
+    "husky": "1.2.0",
+    "jest": "24.8.0",
+    "mini-css-extract-plugin": "^0.6.0",
+    "prismjs": "^1.16.0",
+    "react": "16.8.6",
+    "react-dom": "16.8.6",
+    "react-refractor": "1.0.1",
+    "react-testing-library": "5.4.2",
+    "refractor": "2.9.0",
+    "rollup": "0.67.3",
+    "rollup-plugin-terser": "3.0.0",
+    "rollup-plugin-typescript2": "0.21.0",
+    "style-loader": "^0.23.1",
+    "ts-jest": "23.1.4",
+    "tslib": "1.9.3",
+    "typescript": "3.1.6",
+    "webpack": "4.28.4",
+    "webpack-bundle-analyzer": "3.3.2",
+    "webpack-cli": "3.3.0",
+    "webpack-dev-server": "3.1.14"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "typestyle": "^2.0.2"
+  }
+}
