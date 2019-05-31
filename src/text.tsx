@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { joinNames, ClassName, readOption } from './styles'
 import { style } from 'typestyle'
-import { useTheme } from './theme'
+import { useTheme } from './ThemeProvider'
 
 export interface TextTheme {
   text: string

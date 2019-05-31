@@ -1,6 +1,8 @@
 import React, { Fragment } from 'react'
-import { PanelHeader, PanelContent, Text, Button, List } from '../src'
+import { PanelHeader, PanelContent, Text, Button, List, Input } from '../src'
 import { useHistory } from 'daggerboard'
+// import { ControlGroup } from '../src/controlGroup'
+import { Link } from './Link'
 
 export function Landing() {
   const { push } = useHistory()
@@ -21,6 +23,8 @@ export function Landing() {
           <Button text="Tooltip" />
           <Button text="Panel" />
           <Button text="List" />
+          <Button primary text="Reset" />
+          <Link text="Typing Exercise" to="/typing" />
         </List>
       </PanelContent>
     </Fragment>

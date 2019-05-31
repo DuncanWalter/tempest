@@ -3,7 +3,7 @@ import { ReactNode } from 'react'
 import { style } from 'typestyle'
 import { joinNames, justifyBetween, ClassName, alignCenter } from './styles'
 import { Text } from './text'
-import { useTheme } from './theme'
+import { useTheme } from './ThemeProvider'
 
 export interface PanelTheme {
   content: string

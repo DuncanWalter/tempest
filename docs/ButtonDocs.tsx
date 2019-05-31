@@ -63,7 +63,7 @@ const buttonTypeCode = `<Button primary text="primary" />
 <Button type={'secondary'} text="dynamic"/>
 <Button text="default" />
 <Button primary disabled text="disabled" />
-<Button danger text="danger" />
+<Button attention text="attention" />
 `
 
 function ButtonTypeDemo() {
@@ -74,7 +74,7 @@ function ButtonTypeDemo() {
       <Button type={'secondary'} text="dynamic" />
       <Button text="default" />
       <Button primary disabled text="disabled" />
-      <Button danger text="danger" />
+      <Button attention text="attention" />
     </List>
   )
 }

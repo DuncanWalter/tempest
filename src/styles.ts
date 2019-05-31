@@ -13,7 +13,19 @@ export type ClassName =
 
 interface ClassNames extends Array<ClassName | ClassNames> {}
 
-export function readOption(
+interface ReadOption {
+  <Option extends string>(
+    options: Option[],
+    props: { [prop: string]: unknown; type?: Option },
+  ): Option | void
+  <Option extends string>(
+    options: Option[],
+    props: { [prop: string]: unknown; type?: Option },
+    defaultValue: Option,
+  ): Option
+}
+
+const readOption = function(
   options: string[],
   props: { [prop: string]: unknown; type?: string },
   defaultValue?: string,
@@ -29,7 +41,9 @@ export function readOption(
         return true
       }) || defaultValue
   )
-}
+} as ReadOption
+
+export { readOption }
 
 export const justifyCenter = style({
   display: 'flex',

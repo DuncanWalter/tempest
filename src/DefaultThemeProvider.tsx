@@ -1,10 +1,11 @@
 import React from 'react'
-import { ThemeContext } from './theme'
 import { ReactNode } from 'react'
 import { defaultButtonTheme } from './button'
 import { defaultPanelTheme } from './panel'
 import { defaultTextTheme } from './text'
 import { defaultTooltipTheme } from './tooltip'
+import { ThemeProvider } from './ThemeProvider'
+import { Palette, defaultLight } from './palette'
 
 export const defaultTheme = {
   button: defaultButtonTheme,
@@ -13,10 +14,14 @@ export const defaultTheme = {
   tooltip: defaultTooltipTheme,
 }
 
-export function DefaultThemeProvider({ children }: { children: ReactNode }) {
-  return (
-    <ThemeContext.Provider value={defaultTheme}>
-      {children}
-    </ThemeContext.Provider>
-  )
+interface DefaultThemProviderProps {
+  children: ReactNode | ReactNode[]
+  palette?: Palette
+}
+
+export function DefaultThemeProvider({
+  children,
+  palette = defaultLight,
+}: DefaultThemProviderProps) {
+  return <ThemeProvider theme={defaultTheme}>{children}</ThemeProvider>
 }

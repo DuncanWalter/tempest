@@ -1,7 +1,7 @@
 import React, { ReactNode, useState } from 'react'
 import { useRef } from 'react'
 import { style, keyframes } from 'typestyle'
-import { useTheme } from './theme'
+import { useTheme } from './ThemeProvider'
 import { joinNames, justifyEnd, column } from './styles'
 import { Text } from './text'
 import { PanelContent, Panel } from './panel'

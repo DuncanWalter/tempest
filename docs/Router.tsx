@@ -3,10 +3,12 @@ import { useRouter, useHistory } from 'daggerboard'
 import { PanelContent, PanelHeader, Button } from '../src'
 import { Landing } from './Landing'
 import { ButtonDocs } from './ButtonDocs'
+import { TypingExercise } from './TypingExercise'
 
 export function Router() {
   return useRouter({
     buttons: <ButtonDocs />,
+    typing: <TypingExercise />,
     '': ({ exact }) => (exact ? <Landing /> : <PageNotFound />),
   })
 }
